@@ -18,7 +18,6 @@
 				<h3 class="card-title">@lang('menu.fare_settings')
 				</h3>
 			</div>
-
 			<div class="card-body">
 				<div>
 					<ul class="nav nav-pills custom">
@@ -27,7 +26,7 @@
 					@endforeach
 					</ul>
 				</div>
-			
+				
 				<div class="row">
 					<div class="col-md-12">
 						<div class="tab-content card-body">
@@ -152,28 +151,17 @@
 											{!! Form::number('name['.$type.'_night_std_fare]',Hyvikk::fare($type.'_night_std_fare'),['class'=>"form-control",'required','min'=>0,'step'=>'0.01']) !!}
 										</div>
 									</div>
+								</div>
 
-
-									<div>
-										<ul class="nav nav-pills custom">
-										@foreach($types as $type)
-											<li class="nav-item"><a href="#{{strtolower(str_replace(' ','',$type))}}" data-toggle="tab" class="nav-link text-uppercase @if(reset($types) == $type) active @endif "> {{$type}} <i class="fa"></i></a></li>
-										@endforeach
-										</ul>
-									</div>
-	<br>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-md-4">
-												
-												<label for="">Base Fare</label>
-												<input type="text">
-											</div>
-
-										</div>
-									</div>
-
-
+								<div class="card-body">
+				<div>
+				<ul class="nav nav-pills custom">
+					@foreach($types as $type)
+						<li class="nav-item"><a href="#{{strtolower(str_replace(' ','',$type))}}" data-toggle="tab" class="nav-link text-uppercase @if(reset($types) == $type) active @endif "> {{$type}} <i class="fa"></i></a></li>
+					@endforeach
+					</ul>
+				</div>
+								
 
 								<div class="card-footer">
 									<div class="col-md-2">

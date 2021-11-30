@@ -17,7 +17,6 @@
 				<h3 class="card-title"><?php echo app('translator')->get('menu.fare_settings'); ?>
 				</h3>
 			</div>
-
 			<div class="card-body">
 				<div>
 					<ul class="nav nav-pills custom">
@@ -26,7 +25,7 @@
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 					</ul>
 				</div>
-			
+				
 				<div class="row">
 					<div class="col-md-12">
 						<div class="tab-content card-body">
@@ -176,28 +175,19 @@
 
 										</div>
 									</div>
+								</div>
 
-
-									<div>
-										<ul class="nav nav-pills custom">
-										<?php $__currentLoopData = $types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-											<li class="nav-item"><a href="#<?php echo e(strtolower(str_replace(' ','',$type))); ?>" data-toggle="tab" class="nav-link text-uppercase <?php if(reset($types) == $type): ?> active <?php endif; ?> "> <?php echo e($type); ?> <i class="fa"></i></a></li>
-										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-										</ul>
-									</div>
-	<br>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-md-4">
-												
-												<label for="">Base Fare</label>
-												<input type="text">
-											</div>
-
-										</div>
-									</div>
-
-
+								<div class="card-body">
+				<div>
+					<div>
+					<ul class="nav nav-pills custom">
+					<?php $__currentLoopData = $types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+						<li class="nav-item"><a href="#<?php echo e(strtolower(str_replace(' ','',$type))); ?>" data-toggle="tab" class="nav-link text-uppercase <?php if(reset($types) == $type): ?> active <?php endif; ?> "> <?php echo e($type); ?> <i class="fa"></i></a></li>
+					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+					</ul>
+					</div>
+				</div>
+								
 
 								<div class="card-footer">
 									<div class="col-md-2">
