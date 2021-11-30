@@ -134,6 +134,30 @@
             </div>
           </div>
         </div>
+
+
+        <!-- FITUR BARU -->
+        <div class="card-body">
+          @lang('fleet.time_interval')
+          <div class="row" style="margin-top: 10px;">
+            
+            <div class="form-group col-md-3 col-xs-4">
+              <input type="number" name="time1" class="form-control" id="time1">
+            </div>
+
+            <div class="col-md-4  col-xs-4">
+              <select id="interval" name="interval1" class="form-control" >
+                <option value="day(s)"> @lang('fleet.days')</option>
+                <option value="week(s)"> @lang('fleet.weeks')</option>
+                <option value="month(s)"> @lang('fleet.months')</option>
+                <option value="year(s)"> @lang('fleet.years')</option>
+              </select>
+            </div>
+          </div>
+
+
+
+
         <div class="row">
           <div class="col-md-3">
             <div class="form-group">

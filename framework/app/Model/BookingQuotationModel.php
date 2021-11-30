@@ -25,7 +25,7 @@ class BookingQuotationModel extends Model
         'driver_id', 'note', 'day', 'mileage', 'waiting_time', 'total', 'tax_total', 'total_tax_percent', 
         'total_tax_charge_rs',
         //fitur baru
-        'time-interval','meter-interval',
+        'time_interval','meter_interval',
     ];
 
     public function vehicle()

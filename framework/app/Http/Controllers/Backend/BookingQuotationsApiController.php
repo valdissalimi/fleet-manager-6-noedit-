@@ -68,6 +68,9 @@ class BookingQuotationsApiController extends Controller
             'driver' => ($row->driver_id) ? $row->driver->name : "",
             'mileage' => $row->mileage . " " . Hyvikk::get('dis_format'),
             'waiting_time' => $row->waiting_time,
+
+            // 'time-interval' => $row->time_interval,
+
             'amount' => Hyvikk::get('currency') . " " . $row->total,
             'tax_percent' => (($row->total_tax_percent) ? $row->total_tax_percent : 0) . "%",
             'tax_charges' => Hyvikk::get('currency') . " " . ($row->total_tax_charge_rs) ? $row->total_tax_charge_rs : 0,
